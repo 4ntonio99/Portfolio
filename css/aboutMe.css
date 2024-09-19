@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Bergamo;
+    src: url(../public/Bargemo.otf);
+  }
+  @font-face {
+    font-family:EBGaramond;
+    src: url(../public/EBGaramond.ttf);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#about {
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    border: 15px double #d7cdba;
+    overflow: hidden;
+    z-index: 1;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#aboutBody {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: flex;
+}
+#aboutBodyCover {
+    border-right: 1px solid #d7cdba;
+    width: 40%;
+    height: 100%;
+}
+#aboutBodyCover h4{
+    font-size: clamp(20px, 3vw, 45px);
+    font-weight: 100;
+    color: #d7cdba;
+    font-family: 'Bergamo';
+}
+#aboutBodyCover h4:nth-child(1){
+    margin: 50% 0 0 5%;
+}
+#aboutBodyCover h4:nth-child(4){
+    margin: 5% 0 0 30%;
+}
+#aboutBodyCover h1{
+    font-size: clamp(60px, 8vw, 150px);
+    font-weight: 100;
+    color: #d7cdba;
+    margin-left: 5%;
+    letter-spacing: 0;
+    font-family: 'Bergamo';
+}
+#aboutBodyCover h2{
+    font-size: clamp(60px, 8vw, 150px);
+    font-family: 'Bergamo';
+    font-weight: 100;
+    color: #d7cdba;
+    margin-left: 18%;
+    line-height : 40px;
+}
+#aboutBodyInfo {
+    height: 100%;
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+}
+.aboutBodyInfoItem {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    border: 1px solid #d7cdba;
+    background-color: #222222;
+    top: 0;
+}
+#aboutBodyInfoContact {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    border: 10px double #d7cdba;
+    background-color: #222222;
+    right: 0;
+    color: #d7cdba;
+    font-size: clamp(35px, 5vw, 80px);
+    font-family: 'Bergamo';
+    writing-mode: vertical-lr;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutBodyInfoItem h4{
+    color: #d7cdba;
+    font-size: clamp(60px, 5vw, 80px);
+    font-family: 'Bergamo';
+    text-align: center;
+    border-bottom: 2px solid #d7cdba;
+    width: 80%;
+    margin: auto;
+}
+#aboutBodyInfoMe p{
+    color: #d7cdba;
+    font-size: clamp( 20px, 2vw, 30px);
+    font-family: 'EBGaramond';
+    font-weight: 100;
+    width: 80%;
+    margin: 5% auto 0;
+}
+.aboutBodyInfoItemImage {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    margin: 5% 0 2.5%;
+}
+.aboutBodyInfoItemImage img{
+    height: 100%;
+}
+#aboutBodyInfoKnow h5 {
+    color: #d7cdba;
+    font-size: clamp(20px, 3vw, 40px);
+    font-family: 'Bergamo';
+    margin: 5% 0 0 5%;
+}
+
+#aboutBodyInfoKnowDegree {
+    border: 1px solid #d7cdba;
+    padding: 8px 0;
+}
+#aboutBodyInfoKnowSpecialty {
+    border: 1px solid #d7cdba;
+    padding: 8px 0;
+}
+.aboutBodyInfoKnowEx {
+    color: #d7cdba;
+    font-size: clamp( 12px, 2vw, 30px);
+    font-family: 'EBGaramond';
+    border: 1px solid #d7cdba;
+    padding: 4px 5%;
+    margin: 0;
+}
+@media (max-width: 1000px){
+    #aboutBody {
+        flex-direction: column;
+    }
+    #aboutBodyCover {
+        width: 100%;
+        height: 40%;
+    }
+    #aboutBodyCover h4{
+        font-size: 50px;
+        font-weight: 100;
+        color: #d7cdba;
+        font-family: 'Bergamo';
+    }
+    #aboutBodyCover h4:nth-child(1){
+        margin: 30% 0 0 5%;
+    }
+    #aboutBodyCover h4:nth-child(4){
+        margin: 5% 0 0 30%;
+    }
+    #aboutBodyCover h1{
+        font-size: 150px;
+        margin-left: 10%;
+    }
+    #aboutBodyCover h2{
+        font-size: 150px;
+        line-height : 80px;
+    }
+    #aboutBodyInfo {
+        width: 100%;
+        height: 60%;
+    }
+    .aboutBodyInfoItem {
+        width: 100%;
+        height: 100%;
+    }
+    .aboutBodyInfoItemImage {
+        height: 25%;
+        margin: 10% 0 5%;
+    }
+    .aboutBodyInfoItem h4{
+        font-size: 100px;
+    }
+    #aboutBodyInfoMe p{
+        font-size: 40px;
+    }
+    #aboutBodyInfoKnow h5 {
+        font-size: 60px;
+    }
+    .aboutBodyInfoKnowEx {
+        font-size: 40px;
+    }
+    #aboutBodyInfoContact {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #d7cdba;
+        font-size: 80px;
+        font-family: 'Bergamo';
+        writing-mode: horizontal-tb;
+    }
+}

@@ -1,0 +1,143 @@
+@font-face {
+    font-family: Bergamo-Regular;
+    src: url(../public/BergamoStd-Regular.otf);
+  }
+  @font-face {
+    font-family: Bergamo-Bold;
+    src: url(../public/BergamoStd-Bold.otf);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#services {
+    width: 99vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #222222;
+    border: 15px double #d7cdba;
+    z-index: 5;
+}
+.spacer {
+    height: 15px;
+}
+#servicesBody {
+    height: 70vh;
+    width: 99%;
+    margin: auto;
+    border: 1px solid #d7cdba;
+    display:  grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    transition: 1s linear;
+}
+.service {
+    height: 100%;
+    border: 1px solid #d7cdba;
+    cursor: pointer;
+    color: #d7cdba;
+    writing-mode: vertical-lr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(40px, 5vw, 60px);
+    font-family: 'Bergamo';
+}
+#servicesBody:has(.service:nth-child(1):hover) {
+    grid-template-columns:1.4fr 0.9fr 0.9fr 0.9fr 0.9fr;
+}
+.service:nth-child(1):hover {
+    background-image: url(../public/landing.png);
+    box-sizing: 100%;
+    background-repeat: no-repeat;
+}
+#servicesBody:has(.service:nth-child(2):hover) {
+    grid-template-columns:0.9fr 1.4fr 0.9fr 0.9fr 0.9fr;
+}
+.service:nth-child(2):hover {
+    background-image: url(../public/website.png);
+    box-sizing: 100%;
+    background-repeat: no-repeat;
+}
+#servicesBody:has(.service:nth-child(3):hover) {
+    grid-template-columns:0.9fr 0.9fr 1.4fr 0.9fr 0.9fr;
+}
+.service:nth-child(3):hover {
+    background-image: url(../public/ecommerce.png);
+    box-sizing: 100%;
+    background-repeat: no-repeat;
+}
+#servicesBody:has(.service:nth-child(4):hover) {
+    grid-template-columns:0.9fr 0.9fr 0.9fr 1.4fr 0.9fr;
+}
+.service:nth-child(4):hover {
+    background-image: url(../public/portfolio.png);
+    box-sizing: 100%;
+    background-repeat: no-repeat;
+}
+#servicesBody:has(.service:nth-child(5):hover) {
+    grid-template-columns:0.9fr 0.9fr 0.9fr 0.9fr 1.4fr;
+}
+.service:nth-child(5):hover {
+    background-image: url(../public/Blog.png);
+    box-sizing: 100%;
+    background-repeat: no-repeat;
+}
+#servicesFooter {
+    width: 99%;
+    margin: auto;
+    height: 15vh;
+    border: 1px solid #d7cdba;
+    color:#d7cdba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+#servicesFooter p{
+    font-size: clamp(40px, 5vw, 75px);
+    font-family: 'Bergamo';
+    margin: 0 10%;
+}
+#servicesFooter img{
+    height: 120%;
+    margin-top: 18%;
+    transition: 1s linear;
+}
+#servicesFooter:hover > img{
+    margin-top: 0%;
+}
+@media only screen and (max-width: 600px){
+    #servicesBody {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .service {
+        writing-mode: horizontal-tb;
+    }
+    #servicesBody:has(.service:nth-child(1):hover) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:1.4fr 0.9fr 0.9fr 0.9fr 0.9fr;
+    }
+    #servicesBody:has(.service:nth-child(2):hover) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:0.9fr 1.4fr 0.9fr 0.9fr 0.9fr;
+    }
+    #servicesBody:has(.service:nth-child(3):hover) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:0.9fr 0.9fr 1.4fr 0.9fr 0.9fr;
+    }
+    #servicesBody:has(.service:nth-child(4):hover) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:0.9fr 0.9fr 0.9fr 1.4fr 0.9fr;
+    }
+    #servicesBody:has(.service:nth-child(5):hover) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:0.9fr 0.9fr 0.9fr 0.9fr 1.4fr;
+    }
+    #servicesFooter img{
+        display: none;
+    }
+}

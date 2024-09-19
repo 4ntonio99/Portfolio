@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Bergamo-Regular;
+  src: url(../public/BergamoStd-Regular.otf);
+}
+@font-face {
+  font-family: Bergamo-Bold;
+  src: url(../public/BergamoStd-Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 450vh;
+  width: 99vw;
+  overflow-x: hidden;
+  background-image: url("../public/BG.svg"),
+    linear-gradient(to right, #222222, #222222);
+  background-size: 130% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#cover {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#cover div {
+  border: 1px solid red;
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  height: 65%;
+  width: 54%;
+}
